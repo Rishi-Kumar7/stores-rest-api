@@ -1,5 +1,5 @@
 from flask import Flask# making a flask app, getting the requests
-from flask_restful  import  Api # Resource: required data, Api: making api of an flask app, reqparse: parsing the data
+from flask_restful import Api # Resource: required data, Api: making api of an flask app, reqparse: parsing the data
 from flask_jwt import JWT # JWT: key for authentication, jwt_required: decorator for authentication , in this case above GET
 from security import authenticate, identity # security: check security.py
 from resources.user import UserRegister
