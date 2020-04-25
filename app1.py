@@ -1,4 +1,4 @@
-from flask import Flask# making a flask app, getting the requests
+ from flask import Flask# making a flask app, getting the requests
 from flask_restful  import  Api # Resource: required data, Api: making api of an flask app, reqparse: parsing the data
 from flask_jwt import JWT # JWT: key for authentication, jwt_required: decorator for authentication , in this case above GET
 from security import authenticate, identity # security: check security.py
@@ -15,9 +15,7 @@ app.secret_key = 'rishikumar29' # pin for authentication of the app
 
 api = Api(app)# converting app to Api for ease
 
-@app.before_first_request
-def create_tables():
-    db.create_all()
+
 
 
 jwt = JWT(app, authenticate, identity) #/auth
